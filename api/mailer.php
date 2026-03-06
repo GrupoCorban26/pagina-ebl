@@ -37,15 +37,24 @@ if (empty($recaptcha_response)) {
     exit;
 }
 
-// Llamada a la API de Google para verificar el token
-$verify_url = "https://www.google.com/recaptcha/api/siteverify?secret={$recaptcha_secret}&response={$recaptcha_response}";
-$verify_response = @file_get_contents($verify_url);
+// Llamada cURL a la API de Google para verificar el token (para burlar restricciones allow_url_fopen en cPanel)
+$verify_url = "https://www.google.com/recaptcha/api/siteverify";
+$data = ['secret' => $recaptcha_secret, 'response' => $recaptcha_response];
 
-if ($verify_response === false) {
+$ch = curl_init($verify_url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($ch, CURLOPT_TIMEOUT, 5); // Fallar rápido en 5 segundos si Google no responde
+$verify_response = curl_exec($ch);
+
+if (curl_errno($ch)) {
+    curl_close($ch);
     http_response_code(500);
-    echo json_encode(["status" => "error", "message" => "Error al conectar con la validación de Google. Intente nuevamente."]);
+    echo json_encode(["status" => "error", "message" => "Ocurrió un error conectando con el servicio de seguridad. Refresque e intente nuevamente."]);
     exit;
 }
+curl_close($ch);
 
 $response_data = json_decode($verify_response);
 
@@ -146,6 +155,7 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // O usa PHPMailer::ENCRYPTION_SMTPS si el puerto es 465
     $mail->Port       = SMTP_PORT;
     $mail->CharSet    = 'UTF-8';
+    $mail->Timeout    = 10; // 10 segundos máximo para intentar conectar (evita quedarse "Pending" eternamente)
 
     // 1. Enviar el correo a la empresa (Notificación del Lead)
     $mail->setFrom(SMTP_USER, 'EBL Web System');
