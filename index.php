@@ -11,8 +11,12 @@ if (isset($_GET['lang'])) {
     $_SESSION['lang'] = $_GET['lang'];
 }
 
-$texts = []; 
-// Por ahora mantenemos el texto directo en las vistas como lo teníamos, 
-// pero dejamos el arreglo vacío para evitar errores de Undefined Variable si aplicamos un lang file luego.
+// Carga de archivo de idioma
+$langFile = __DIR__ . "/src/lang/{$_SESSION['lang']}.php";
+if (file_exists($langFile)) {
+    $texts = require $langFile;
+} else {
+    $texts = require __DIR__ . "/src/lang/es.php"; // Fallback
+}
 
 require_once 'rutas.php';

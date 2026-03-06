@@ -20,9 +20,11 @@ $baseFolder = 'pagina-ebl'; // Cambia esto si lo mueves a carpeta principal o su
 if ($host === 'localhost') {
     define('BASE_URL', "http://localhost/$baseFolder");
 } else {
-    define('BASE_URL', "https://$host/v2_php"); // Ajustar según servidor de pruebas
+    // IMPORTANTE PARA PRODUCCIÓN:
+    // detecta automáticamente el dominio en el que esté hospedado.
+    define('BASE_URL', "https://$host"); 
 }
-
+define('FORM_URL', BASE_URL . '/form');
 define('CSS_URL', BASE_URL . '/src/css');
 define('IMG_URL', BASE_URL . '/src/img');
 define('JS_URL', BASE_URL . '/src/js');
@@ -35,8 +37,8 @@ $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Mantenemos constantes temporales estáticas mientras integras composer/dotenv si fuera necesario en EBL
-define('SMTP_HOST', 'eblgroup.pe');
-define('SMTP_USER', 'consultas@eblgroup.pe');
-define('SMTP_PASS', '!y{Hs$c~R]-W.UM4');
-define('SMTP_PORT', 465);
-define('CAPTCHAT_SECRETA', '6Lf3GfkrAAAAAKISx8z-QQJl2c7_LZ06y8xdbhRt');
+define('SMTP_HOST', $_ENV['SMTP_HOST']);
+define('SMTP_USER', $_ENV['SMTP_USER']);
+define('SMTP_PASS', $_ENV['SMTP_PASS']);
+define('SMTP_PORT', $_ENV['SMTP_PORT']);
+define('CAPTCHAT_SECRETA', $_ENV['CAPTCHA_SECRETA']);

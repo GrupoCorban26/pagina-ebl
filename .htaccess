@@ -2,7 +2,10 @@
 # 1️⃣ Configuración básica de Apache
 # --------------------------------------------------------
 RewriteEngine On
-RewriteBase /v2_php/
+# IMPORTANTE PARA PRODUCCIÓN:
+# Si subes la web a la carpeta principal (public_html o raíz del dominio), 
+# debes cambiar la línea de abajo por: RewriteBase /
+RewriteBase /pagina-ebl/
 
 # --------------------------------------------------------
 # 2️⃣ Reglas exclusivas
@@ -11,7 +14,10 @@ RewriteBase /v2_php/
 RewriteCond %{HTTP_HOST} !^(localhost)(:[0-9]+)?$ [NC]
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^(www\.)?eblgroup\.pe$ [NC]
-RewriteRule ^(.*)$ https://eblgroup.pe/v2_php/$1 [L,R=301]
+# IMPORTANTE PARA PRODUCCIÓN:
+# Si subes la web a la carpeta principal, debes quitar "/pagina-ebl" de la línea de abajo:
+# RewriteRule ^(.*)$ https://eblgroup.pe/$1 [L,R=301]
+RewriteRule ^(.*)$ https://eblgroup.pe/pagina-ebl/$1 [L,R=301]
 
 # Si es archivo o carpeta real, no tocarlo
 RewriteCond %{REQUEST_FILENAME} !-f

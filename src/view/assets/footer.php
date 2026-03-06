@@ -7,12 +7,12 @@
                 
                 <!-- Columna 1: Info e Identidad -->
                 <div>
-                    <div class="bg-white p-2 rounded inline-block mb-6">
-                        <img src="<?= IMG_URL_OLD ?>/LOGO-PRINCIPAL.png" alt="EBL Group Logo" class="h-10 w-auto">
+                    <div class=" p-2 rounded inline-block mb-6">
+                        <img src="<?= IMG_URL ?>/logo-blanco-sin-fondo.png" alt="EBL Group Logo" class="h-10 w-auto">
                     </div>
                     <p class="text-gray-300 text-sm mb-6 leading-relaxed">
                         EBL GRUPO LOGISTICO S.A.C.<br>
-                        Agencia especialista en aduanas y transporte de carga logística internacional de clase mundial.
+                        <?= $texts['footer_desc'] ?>
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com/eblGrupoLogistico/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red transition-colors duration-300">
@@ -29,7 +29,7 @@
 
                 <!-- Columna 2: Contacto -->
                 <div>
-                    <h3 class="text-lg font-bold mb-6 tracking-wide uppercase text-gray-100">Contáctanos</h3>
+                    <h3 class="text-lg font-bold mb-6 tracking-wide uppercase text-gray-100"><?= $texts['footer_contact_title'] ?></h3>
                     <ul class="space-y-4 text-sm text-gray-300">
                         <li class="flex items-start">
                             <i class="fa-solid fa-location-dot mt-1 mr-3 text-brand-red"></i>
@@ -48,28 +48,28 @@
 
                 <!-- Columna 3: Acreditaciones -->
                 <div>
-                    <h3 class="text-lg font-bold mb-6 tracking-wide uppercase text-gray-100">Acreditaciones</h3>
+                    <h3 class="text-lg font-bold mb-6 tracking-wide uppercase text-gray-100"><?= $texts['footer_cert_title'] ?></h3>
                     <div class="grid grid-cols-2 gap-4 items-center">
                         <div class="bg-white/10 p-3 rounded flex justify-center hover:bg-white/20 transition-colors">
-                            <img src="<?= IMG_URL_OLD ?>/wca-logo-blanco-negro.png" alt="WCA" class="h-8 object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="<?= IMG_URL ?>/wca-logo-blanco-negro.png" alt="WCA" class="h-8 object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity">
                         </div>
                         <div class="bg-white/10 p-3 rounded flex justify-center hover:bg-white/20 transition-colors">
-                            <img src="<?= IMG_URL_OLD ?>/elite-logo-blanco-negro.png" alt="Elite" class="h-8 object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="<?= IMG_URL ?>/elite-logo-blanco-negro.png" alt="Elite" class="h-8 object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity">
                         </div>
                         <div class="bg-white/10 p-3 rounded flex justify-center hover:bg-white/20 transition-colors col-span-2">
-                            <img src="<?= IMG_URL_OLD ?>/sunat-logo-blanco-negro.png" alt="Sunat" class="h-8 object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="<?= IMG_URL ?>/sunat-logo-blanco-negro.png" alt="Sunat" class="h-8 object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity">
                         </div>
                     </div>
                 </div>
 
                 <!-- Columna 4: Libro de Reclamaciones -->
                 <div>
-                    <h3 class="text-lg font-bold mb-6 tracking-wide uppercase text-gray-100">Servicio al Cliente</h3>
+                    <h3 class="text-lg font-bold mb-6 tracking-wide uppercase text-gray-100"><?= $texts['footer_service_title'] ?></h3>
                     <a href="https://herramientassac.andessystems.com.pe/reclamo/20612332208" target="_blank" class="block bg-white/5 border border-gray-600 rounded-lg p-4 hover:border-brand-red hover:bg-white/10 transition-all group">
                         <div class="flex items-center gap-4">
                             <!-- Nota: Corregí este link al libro de reclamaciones HTTP a HTTPS como sugerimos en el analisis inicial -->
                             <img src="https://primesoft-rlatorre-backup-bucket-1.s3.amazonaws.com/ldr/icon-libro-reclamaciones_negro.png" alt="Libro Reclamaciones" class="h-10 filter invert opacity-70 group-hover:opacity-100">
-                            <span class="text-sm text-gray-300 group-hover:text-white font-medium">Libro de<br>Reclamaciones</span>
+                            <span class="text-sm text-gray-300 group-hover:text-white font-medium"><?= $texts['footer_claims'] ?></span>
                         </div>
                     </a>
                 </div>
@@ -78,10 +78,10 @@
 
             <!-- Divisor y Copyright -->
             <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
-                <p>&copy; <?= date('Y') ?> EBL Grupo Logístico. Todos los derechos reservados.</p>
+                <p>&copy; <?= date('Y') ?> EBL Grupo Logístico. <?= $texts['footer_rights'] ?></p>
                 <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition-colors">Políticas de Privacidad</a>
-                    <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
+                    <a href="#" class="hover:text-white transition-colors"><?= $texts['footer_privacy'] ?></a>
+                    <a href="#" class="hover:text-white transition-colors"><?= $texts['footer_terms'] ?></a>
                 </div>
             </div>
         </div>

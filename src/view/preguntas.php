@@ -20,8 +20,8 @@ require_once ASSETS_PATH . '/header.php';
         </svg>
     </div>
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-tight">Preguntas <span class="text-brand-red">Frecuentes</span></h1>
-        <p class="text-lg text-gray-300">Resolvemos tus dudas sobre el agenciamiento de aduanas y transporte de carga.</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-tight"><?= $texts['faq_hero_title'] ?> <span class="text-brand-red"><?= $texts['faq_hero_title_red'] ?></span></h1>
+        <p class="text-lg text-gray-300"><?= $texts['faq_hero_subtitle'] ?></p>
     </div>
 </div>
 
@@ -37,10 +37,10 @@ require_once ASSETS_PATH . '/header.php';
                         <i class="fa-solid fa-file-shield text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">¿Tendré problemas con Aduanas al importar un producto?</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['faq_q1_title'] ?></h3>
                         <p class="text-gray-600 leading-relaxed">
-                            <strong>Realmente no es complicado.</strong><br><br>
-                            Con EBL Grupo Logístico contarás con el soporte de profesionales expertos en la materia. Te asesoramos y tramitamos los permisos necesarios para la nacionalización de cualquier tipo de producto, incluyendo certificados de entidades como SENASA, DIGESA, DIGEMID, entre otras.
+                            <?= $texts['faq_q1_p1'] ?><br><br>
+                            <?= $texts['faq_q1_p2'] ?>
                         </p>
                     </div>
                 </div>
@@ -53,12 +53,12 @@ require_once ASSETS_PATH . '/header.php';
                         <i class="fa-solid fa-clock-rotate-left text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">¿En cuánto tiempo puede llegar mi mercancía?</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['faq_q2_title'] ?></h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Los tiempos de tránsito internacionales varían según el origen y la vía de transporte:<br><br>
-                            <span class="block bg-gray-50 p-3 rounded mt-2 border-l-4 border-brand-blue"><strong>Asia:</strong> Entre 30 a 38 días (vía marítima) desde la fecha de embarque.</span>
-                            <span class="block bg-gray-50 p-3 rounded mt-2 border-l-4 border-brand-red"><strong>Europa:</strong> Tiempo estimado de 30 días aproximadamente.</span>
-                            <span class="block bg-gray-50 p-3 rounded mt-2 border-l-4 border-brand-blue"><strong>América:</strong> Abarca entre 12 a 15 días en promedio.</span>
+                            <?= $texts['faq_q2_p1'] ?><br><br>
+                            <span class="block bg-gray-50 p-3 rounded mt-2 border-l-4 border-brand-blue"><?= $texts['faq_q2_a'] ?></span>
+                            <span class="block bg-gray-50 p-3 rounded mt-2 border-l-4 border-brand-red"><?= $texts['faq_q2_b'] ?></span>
+                            <span class="block bg-gray-50 p-3 rounded mt-2 border-l-4 border-brand-blue"><?= $texts['faq_q2_c'] ?></span>
                         </p>
                     </div>
                 </div>
@@ -71,27 +71,27 @@ require_once ASSETS_PATH . '/header.php';
                         <i class="fa-solid fa-file-invoice-dollar text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">¿Qué impuestos debo pagar al nacionalizar mi mercancía?</h3>
-                        <p class="text-gray-600 leading-relaxed mb-4">Los tributos y recargos exigibles aplican de la siguiente manera:</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['faq_q3_title'] ?></h3>
+                        <p class="text-gray-600 leading-relaxed mb-4"><?= $texts['faq_q3_p1'] ?></p>
                         <ul class="space-y-3">
                             <li class="flex items-start">
                                 <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
-                                <span><strong>Ad Valorem:</strong> El arancel básico sobre el valor CIF.</span>
+                                <span><?= $texts['faq_q3_li1'] ?></span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
-                                <span><strong>IPM:</strong> Impuesto de Promoción Municipal.</span>
+                                <span><?= $texts['faq_q3_li2'] ?></span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
-                                <span><strong>IGV:</strong> Impuesto General a las Ventas.</span>
+                                <span><?= $texts['faq_q3_li3'] ?></span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
-                                <span><strong>Percepción del IGV:</strong> Crédito fiscal que se puede recuperar al momento de realizar la declaración de impuestos mensual.</span>
+                                <span><?= $texts['faq_q3_li4'] ?></span>
                             </li>
                         </ul>
-                        <p class="text-sm text-gray-500 mt-4 italic">* Pueden aplicar otros impuestos dependiendo del tipo específico de producto (Ej: ISC).</p>
+                        <p class="text-sm text-gray-500 mt-4 italic"><?= $texts['faq_q3_note'] ?></p>
                     </div>
                 </div>
             </div>
@@ -103,9 +103,9 @@ require_once ASSETS_PATH . '/header.php';
                         <i class="fa-solid fa-truck-fast text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">¿Qué se requiere para una importación exitosa?</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['faq_q4_title'] ?></h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Además de contar con un producto de alta rotación e innovador en el mercado, es <strong>fundamental</strong> contar con aliados estratégicos con experiencia certificada (como EBL Group) para llevar a cabo de manera impecable todo el proceso logístico y aduanero, evitando demoras o sobrecostos en almacenaje.
+                            <?= $texts['faq_q4_p1'] ?>
                         </p>
                     </div>
                 </div>
@@ -119,10 +119,10 @@ require_once ASSETS_PATH . '/header.php';
 <!-- CALL TO ACTION -->
 <section class="py-16 bg-brand-blue">
     <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-white mb-6">¿Tienes una pregunta diferente?</h2>
-        <p class="text-gray-300 mb-8 text-lg">Nuestros asesores comerciales están listos para atenderte personalmente.</p>
+        <h2 class="text-3xl font-bold text-white mb-6"><?= $texts['faq_cta_title'] ?></h2>
+        <p class="text-gray-300 mb-8 text-lg"><?= $texts['faq_cta_desc'] ?></p>
         <a href="<?= BASE_URL ?>/contacto" class="inline-block bg-brand-red hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 uppercase tracking-widest">
-            Contactar a un Asesor
+            <?= $texts['faq_cta_btn'] ?>
         </a>
     </div>
 </section>

@@ -9,15 +9,15 @@ require_once ASSETS_PATH . '/header.php';
 <!-- BANNER HERO MODERNO -->
 <div class="relative bg-brand-blue py-24 lg:py-32 flex items-center justify-center overflow-hidden">
     <!-- El fondo oscuro con opacidad e imagen de fondo (requiere que exista la imagen o pone un placeholder oscuro) -->
-    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('../img/nosotros.jpg');"></div>
+    <div class="absolute inset-0 bg-cover bg-center opacity-30 bg-[url('../../img/nosotros.jpg')]"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-brand-blue to-transparent"></div>
     
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 uppercase tracking-tight">
-            ¿Quiénes <span class="text-brand-red">Somos?</span>
+            <?= $texts['about_hero_title'] ?> <span class="text-brand-red"><?= $texts['about_hero_title_red'] ?></span>
         </h1>
         <p class="text-lg md:text-xl text-gray-200 font-light leading-relaxed">
-            Simplificando tus envíos internacionales con agenciamiento de carga y aduanas de clase mundial.
+            <?= $texts['about_hero_subtitle'] ?>
         </p>
     </div>
 </div>
@@ -30,20 +30,20 @@ require_once ASSETS_PATH . '/header.php';
             <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
                 <!-- Efecto overlay rojo sutil al hacer hover sobre la imagen -->
                 <div class="absolute inset-0 bg-brand-red/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                <img src="<?= IMG_URL_OLD ?>/nosotros.jpg" alt="Equipo EBL Group" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                <img src="<?= IMG_URL ?>/nosotros.jpg" alt="Equipo EBL Group" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
             </div>
 
             <div class="space-y-6 text-gray-600 leading-relaxed text-lg">
                 <p>
-                    <strong class="text-brand-blue font-bold text-xl">¡Simplifica tus envíos internacionales!</strong><br>
-                    En <span class="text-brand-red font-semibold">EBL Grupo Logístico</span>, nos especializamos en facilitar el proceso de importación y exportación de mercancías, brindándote soluciones logísticas eficientes y personalizadas. Nuestro equipo de expertos en aduanas y carga está aquí para hacer que tus envíos sean rápidos, seguros y libres de estrés.
+                    <strong class="text-brand-blue font-bold text-xl"><?= $texts['about_sec1_title'] ?></strong><br>
+                    <?= $texts['about_sec1_p1_1'] ?><span class="text-brand-red font-semibold"><?= $texts['about_sec1_p1_2'] ?></span><?= $texts['about_sec1_p1_3'] ?>
                 </p>
                 <p>
-                    <strong>¿Necesitas ayuda para navegar por los complejos reglamentos aduaneros?</strong><br>
-                    ¡No te preocupes! Nos encargamos de todos los trámites y documentación necesarios para asegurar que tus productos cumplan con todas las normativas y requisitos legales. Así, puedes enfocarte en lo más importante: <em>hacer crecer tu negocio</em>.
+                    <strong><?= $texts['about_sec1_q1'] ?></strong><br>
+                    <?= $texts['about_sec1_p2'] ?><em><?= $texts['about_sec1_p2_em'] ?></em>.
                 </p>
                 <p>
-                    Trabajamos en estrecha colaboración con una red global de socios y expertos en la materia aduanera lo que nos permite ofrecerte una amplia cobertura y conectividad a nivel internacional.
+                    <?= $texts['about_sec1_p3'] ?>
                 </p>
             </div>
 
@@ -55,7 +55,7 @@ require_once ASSETS_PATH . '/header.php';
 <section class="py-20 bg-gray-50 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-extrabold text-brand-blue uppercase tracking-wide">Nuestra Filosofía</h2>
+            <h2 class="text-3xl font-extrabold text-brand-blue uppercase tracking-wide"><?= $texts['about_mission_title'] ?></h2>
             <div class="w-24 h-1 bg-brand-red mx-auto mt-4"></div>
         </div>
 
@@ -66,9 +66,9 @@ require_once ASSETS_PATH . '/header.php';
                 <div class="w-16 h-16 bg-brand-red/10 rounded-full flex items-center justify-center mb-6">
                     <i class="fa-solid fa-bullseye text-2xl text-brand-red"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-brand-blue mb-4">Misión</h3>
+                <h3 class="text-2xl font-bold text-brand-blue mb-4"><?= $texts['about_mission_h3'] ?></h3>
                 <p class="text-gray-600 leading-relaxed">
-                    Proporcionar servicios de agenciamiento de carga y aduanas de clase mundial, brindando soluciones logísticas integrales y personalizadas a nuestros clientes. Nos comprometemos a simplificar el proceso de importación y exportación, asegurando un flujo eficiente de mercancías a través de las fronteras.
+                    <?= $texts['about_mission_desc'] ?>
                 </p>
             </div>
 
@@ -77,9 +77,9 @@ require_once ASSETS_PATH . '/header.php';
                 <div class="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mb-6">
                     <i class="fa-solid fa-eye text-2xl text-brand-blue"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-brand-blue mb-4">Visión</h3>
+                <h3 class="text-2xl font-bold text-brand-blue mb-4"><?= $texts['about_vision_h3'] ?></h3>
                 <p class="text-gray-600 leading-relaxed">
-                    Proporcionar servicios de agenciamiento de carga y aduanas de excelencia, brindando soluciones logísticas integrales a través de un equipo capacitado y una amplia red de socios comerciales. Nos aseguramos de contar con un flujo eficiente de mercancías a través de las fronteras.
+                    <?= $texts['about_vision_desc'] ?>
                 </p>
             </div>
 
@@ -92,65 +92,65 @@ require_once ASSETS_PATH . '/header.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-extrabold text-brand-blue uppercase tracking-wide">Nuestros Valores</h2>
-            <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-lg">Pilares fundamentales para nuestro desarrollo en el mercado mundial.</p>
+            <h2 class="text-3xl font-extrabold text-brand-blue uppercase tracking-wide"><?= $texts['about_values_title'] ?></h2>
+            <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-lg"><?= $texts['about_values_subtitle'] ?></p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Valor 1 -->
-            <div class="group flex flex-col items-center text-center p-6">
+            <div class="group flex flex-col items-center text-center p-6 shadow-xl rounded-xl">
                 <!-- Reemplazo de imágenes por íconos modernos para evitar dependencias de imágenes pequeñas perdidas, aunque pueden usar las suyas si copian la carpeta img -->
                 <div class="mb-6 w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-brand-blue transition-colors duration-300">
                     <i class="fa-solid fa-user-tie text-3xl text-brand-blue group-hover:text-white transition-colors duration-300"></i>
                 </div>
-                <h4 class="text-xl font-bold text-gray-800 mb-3">Profesionalismo</h4>
-                <p class="text-gray-600">Servicio de calidad, eficiente y confiable para todos nuestros clientes aduaneros.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['ab_val1_t'] ?></h4>
+                <p class="text-gray-600"><?= $texts['ab_val1_d'] ?></p>
             </div>
 
             <!-- Valor 2 -->
-            <div class="group flex flex-col items-center text-center p-6">
+            <div class="group flex flex-col items-center text-center p-6 shadow-xl rounded-xl">
                 <div class="mb-6 w-20 h-20 rounded-full bg-red-50 flex items-center justify-center group-hover:bg-brand-red transition-colors duration-300">
                     <i class="fa-solid fa-shield-halved text-3xl text-brand-red group-hover:text-white transition-colors duration-300"></i>
                 </div>
-                <h4 class="text-xl font-bold text-gray-800 mb-3">Integridad</h4>
-                <p class="text-gray-600">Actuamos con honestidad, transparencia y responsabilidad en todas nuestras operaciones.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['ab_val2_t'] ?></h4>
+                <p class="text-gray-600"><?= $texts['ab_val2_d'] ?></p>
             </div>
 
             <!-- Valor 3 -->
-            <div class="group flex flex-col items-center text-center p-6">
+            <div class="group flex flex-col items-center text-center p-6 shadow-xl rounded-xl">
                 <div class="mb-6 w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-brand-blue transition-colors duration-300">
                     <i class="fa-solid fa-users text-3xl text-brand-blue group-hover:text-white transition-colors duration-300"></i>
                 </div>
-                <h4 class="text-xl font-bold text-gray-800 mb-3">Orientación al Cliente</h4>
-                <p class="text-gray-600">Soluciones personalizadas con el fin de entender sus necesidades y superar sus expectativas.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['ab_val3_t'] ?></h4>
+                <p class="text-gray-600"><?= $texts['ab_val3_d'] ?></p>
             </div>
 
             <!-- Valor 4 -->
-            <div class="group flex flex-col items-center text-center p-6">
+            <div class="group flex flex-col items-center text-center p-6 shadow-2xl rounded-xl">
                 <div class="mb-6 w-20 h-20 rounded-full bg-red-50 flex items-center justify-center group-hover:bg-brand-red transition-colors duration-300">
                     <i class="fa-solid fa-lightbulb text-3xl text-brand-red group-hover:text-white transition-colors duration-300"></i>
                 </div>
-                <h4 class="text-xl font-bold text-gray-800 mb-3">Innovación</h4>
-                <p class="text-gray-600">Buscamos mejorar constantemente adoptando nuevas tecnologías para los procesos aduaneros.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['ab_val4_t'] ?></h4>
+                <p class="text-gray-600"><?= $texts['ab_val4_d'] ?></p>
             </div>
 
             <!-- Valor 5 -->
-            <div class="group flex flex-col items-center text-center p-6">
+            <div class="group flex flex-col items-center text-center p-6 shadow-xl rounded-xl">
                 <div class="mb-6 w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-brand-blue transition-colors duration-300">
                     <i class="fa-solid fa-handshake text-3xl text-brand-blue group-hover:text-white transition-colors duration-300"></i>
                 </div>
-                <h4 class="text-xl font-bold text-gray-800 mb-3">Colaboración</h4>
-                <p class="text-gray-600">Fomentamos el trabajo en equipo con socios comerciales y la autoridad aduanera.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['ab_val5_t'] ?></h4>
+                <p class="text-gray-600"><?= $texts['ab_val5_d'] ?></p>
             </div>
 
              <!-- Valor 6 -->
-             <div class="group flex flex-col items-center text-center p-6">
+             <div class="group flex flex-col items-center text-center p-6 shadow-xl rounded-xl">
                 <div class="mb-6 w-20 h-20 rounded-full bg-red-50 flex items-center justify-center group-hover:bg-brand-red transition-colors duration-300">
                     <i class="fa-solid fa-leaf text-3xl text-brand-red group-hover:text-white transition-colors duration-300"></i>
                 </div>
-                <h4 class="text-xl font-bold text-gray-800 mb-3">Responsabilidad</h4>
-                <p class="text-gray-600">Promovemos prácticas responsables y cuidado ambiental en el desarrollo sostenible.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-3"><?= $texts['ab_val6_t'] ?></h4>
+                <p class="text-gray-600"><?= $texts['ab_val6_d'] ?></p>
             </div>
 
         </div>
@@ -162,8 +162,8 @@ require_once ASSETS_PATH . '/header.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-extrabold text-brand-blue uppercase tracking-wide">Comunicáte con Nuestros Expertos</h2>
-            <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-lg">Ejecutivos comerciales expertos en comercio exterior a tu disposición.</p>
+            <h2 class="text-3xl font-extrabold text-brand-blue uppercase tracking-wide"><?= $texts['about_team_title'] ?></h2>
+            <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-lg"><?= $texts['about_team_subtitle'] ?></p>
             <div class="w-24 h-1 bg-brand-red mx-auto mt-6"></div>
         </div>
 
@@ -173,19 +173,33 @@ require_once ASSETS_PATH . '/header.php';
             <?php
             // Array simple de colaboradores para hacer limpio el código
             $colaboradores = [
-                ['nombre' => 'Alexander Chiroque', 'cargo' => 'ENCARGADO COMERCIAL', 'img' => 'colaboradores-alexander.jpg', 'telf' => '+51 922 754 985', 'telf_url' => '51922754985', 'email' => 'a.chiroque@eblgroup.pe'],
-                ['nombre' => 'Cristofer Ramírez', 'cargo' => 'EJECUTIVO COMERCIAL', 'img' => 'colaboradores-cristofer.jpg', 'telf' => '+51 905 452 138', 'telf_url' => '51905452138', 'email' => 'climber@eblgroup.pe'],
-                ['nombre' => 'Miriam Choquehuanca', 'cargo' => 'JEFA DE PRICING', 'img' => 'colaboradores-miriam.jpg', 'telf' => '+51 905 437 602', 'telf_url' => '51905437602', 'email' => 'miriam.chvargas@eblgroup.pe'],
-                ['nombre' => 'Cielo Espinal', 'cargo' => 'ASESOR COMERCIAL', 'img' => 'colaboradores-cielo.jpg', 'telf' => '+51 922 755 279', 'telf_url' => '51922755279', 'email' => 'c.espinal@eblgroup.pe'],
-                ['nombre' => 'Heidy Cruz', 'cargo' => 'ASESOR COMERCIAL', 'img' => 'colaboradores-heidy.jpg', 'telf' => '+51 934 387 995', 'telf_url' => '51934387995', 'email' => 'h.cruz@eblgroup.pe'],
-                ['nombre' => 'Saúl Barreto', 'cargo' => 'ASESOR COMERCIAL', 'img' => 'colaboradores-saul.jpg', 'telf' => '+51 905 433 651', 'telf_url' => '51905433651', 'email' => 's.barreto@eblgroup.pe'],
-                ['nombre' => 'Melissa Ramirez', 'cargo' => 'ASESOR COMERCIAL', 'img' => 'colaboradores-melissa.jpg', 'telf' => '+51 981 365 870', 'telf_url' => '51981365870', 'email' => 'm.ramirez@eblgroup.pe']
+                // Alexander
+                ['nombre' => 'Alexander Chiroque', 'cargo' => 'Jefe Comercial', 'img' => 'colaborador-alexander.jpeg', 'telf' => '+51 922 754 985', 'telf_url' => '51922754985', 'email' => 'a.chiroque@eblgroup.pe'],
+                // Miriam
+                ['nombre' => 'Miriam Choquehuanca', 'cargo' => 'Customer Service', 'img' => 'colaborador-miriam.jpeg', 'telf' => '+51 905 437 602', 'telf_url' => '51905437602', 'email' => 'miriam.chvargas@eblgroup.pe'],
+                // Maribel
+                ['nombre' => 'Maribel Suarez', 'cargo' => 'Asistente de Operaciones', 'img' => 'colaborador-maribel.jpeg', 'telf' => '+51 970 804 427', 'telf_url' => '51970804427', 'email' => 'operaciones5@corbanaduanas.pe'],
+                // Cielo
+                ['nombre' => 'Cielo Espinal', 'cargo' => 'Asistente de Pricing', 'img' => 'colaborador-cielo.jpeg', 'telf' => '+51 922 755 279', 'telf_url' => '51922755279', 'email' => 'c.espinal@eblgroup.pe'],
+                // Cristofer
+                ['nombre' => 'Cristofer Ramírez', 'cargo' => 'Ejecutivo Comercial', 'img' => 'colaborador-cristofer.jpeg', 'telf' => '+51 905 452 138', 'telf_url' => '51905452138', 'email' => 'climber@eblgroup.pe'],
+                // Mijael
+                ['nombre' => 'Mijael Suclupe', 'cargo' => 'Ejecutivo Comercial', 'img' => 'colaborador-mijael.jpeg', 'telf' => '+51 924 105 207', 'telf_url' => '51924105207', 'email' => 'm.suclupe@eblgroup.pe'],
+                // Frank
+                ['nombre' => 'Frank Rivera', 'cargo' => 'Ejecutivo Comercial', 'img' => 'colaborador-frank.jpeg', 'telf' => '+51 924 105 128', 'telf_url' => '51924105128', 'email' => 'f.rivera@eblgroup.pe'],
+                // Harley
+                ['nombre' => 'Harley Olivera', 'cargo' => 'Ejecutiva Comercial', 'img' => 'colaborador-harley.jpeg', 'telf' => '+51 924 849 066', 'telf_url' => '51924849066', 'email' => 'h.olivera@eblgroup.pe'],
+                // Julieeth
+                ['nombre' => 'Julieeth Coaguila', 'cargo' => 'Ejecutiva Comercial', 'img' => 'colaborador-julieeth.jpeg', 'telf' => '+51 924 848 605', 'telf_url' => '51924848605', 'email' => 'j.coaguila@eblgroup.pe'],
+                // Yackeline
+                ['nombre' => 'Yackeline Yauri', 'cargo' => 'Ejecutiva Comercial', 'img' => 'colaborador-yackeline.jpeg', 'telf' => '+51 905 433 651', 'telf_url' => '51905433651', 'email' => 'y.yauri@eblgroup.pe'],
+
             ];
 
             foreach ($colaboradores as $colab): ?>
-            <div class="bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col items-center text-center p-6 group">
+            <div class="bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 hover:border-brand-light flex flex-col items-center text-center p-6 group">
                 <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-50 mb-4 group-hover:border-brand-red transition-colors duration-300 p-1">
-                    <img src="<?= IMG_URL_OLD ?>/<?= $colab["img'] ?>" alt="<?= $colab['nombre'] ?>" class="w-full h-full object-cover rounded-full">
+                    <img src="<?= IMG_URL ?>/<?= $colab['img'] ?>" alt="<?= $colab['nombre'] ?>" class="w-full h-full object-cover rounded-full">
                 </div>
                 <h3 class="text-xl font-bold text-brand-blue mb-1"><?= $colab['nombre'] ?></h3>
                 <p class="text-xs font-semibold text-brand-red mb-5 tracking-wide uppercase"><?= $colab['cargo'] ?></p>

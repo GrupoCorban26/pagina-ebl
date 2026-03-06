@@ -1,0 +1,25 @@
+{
+  "name": "pagina-ebl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --minify",
+    "watch:css": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrupoCorban26/pagina-ebl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GrupoCorban26/pagina-ebl/issues"
+  },
+  "homepage": "https://github.com/GrupoCorban26/pagina-ebl#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
