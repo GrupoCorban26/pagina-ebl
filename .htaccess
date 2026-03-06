@@ -1,0 +1,43 @@
+# --------------------------------------------------------
+# 1️⃣ Configuración básica de Apache
+# --------------------------------------------------------
+RewriteEngine On
+RewriteBase /v2_php/
+
+# --------------------------------------------------------
+# 2️⃣ Reglas exclusivas
+# --------------------------------------------------------
+# Redirigir HTTP a HTTPS (solo en dominio real, nunca en localhost)
+RewriteCond %{HTTP_HOST} !^(localhost)(:[0-9]+)?$ [NC]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?eblgroup\.pe$ [NC]
+RewriteRule ^(.*)$ https://eblgroup.pe/v2_php/$1 [L,R=301]
+
+# Si es archivo o carpeta real, no tocarlo
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Enviar todo a index.php con el parámetro uri
+RewriteRule ^(.*)$ index.php?uri=$1 [L,QSA]
+
+# --------------------------------------------------------
+# 3️⃣ Activar compresión GZip
+# --------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# --------------------------------------------------------
+# 4️⃣ Seguridad
+# --------------------------------------------------------
+<IfModule mod_headers.c>
+    Header unset X-Powered-By
+    Header unset Server
+    
+    # Cabeceras de Seguridad Críticas
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

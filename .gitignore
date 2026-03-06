@@ -1,0 +1,9 @@
+# Configuración local y credenciales
+.env
+
+# Dependencias de PHP (Composer)
+/vendor/
+
+# Archivos temporales de sistema
+Thumbs.db
+.DS_Store
