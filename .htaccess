@@ -5,8 +5,7 @@ RewriteEngine On
 # IMPORTANTE PARA PRODUCCIÓN:
 # Si subes la web a la carpeta principal (public_html o raíz del dominio), 
 # debes cambiar la línea de abajo por: RewriteBase /
-RewriteBase /pagina-ebl/
-
+RewriteBase /
 # --------------------------------------------------------
 # 2️⃣ Reglas exclusivas
 # --------------------------------------------------------
@@ -16,8 +15,7 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^(www\.)?eblgroup\.pe$ [NC]
 # IMPORTANTE PARA PRODUCCIÓN:
 # Si subes la web a la carpeta principal, debes quitar "/pagina-ebl" de la línea de abajo:
-# RewriteRule ^(.*)$ https://eblgroup.pe/$1 [L,R=301]
-RewriteRule ^(.*)$ https://eblgroup.pe/pagina-ebl/$1 [L,R=301]
+RewriteRule ^(.*)$ https://eblgroup.pe/$1 [L,R=301]
 
 # Si es archivo o carpeta real, no tocarlo
 RewriteCond %{REQUEST_FILENAME} !-f
