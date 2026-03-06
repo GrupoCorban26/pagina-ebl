@@ -22,6 +22,9 @@ if (empty($nombre) || empty($correo) || empty($contacto) || empty($asunto) || em
 
 require_once dirname(__DIR__) . '/config.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 // ==========================================
 // 0. VERIFICACIÓN DE GOOGLE reCAPTCHA v2
 // ==========================================
@@ -129,23 +132,54 @@ $cuerpo_cliente = "
 ";
 
 // ==========================================
-// EJecución de Envíos
+// EJecución de Envíos con PHPMailer
 // ==========================================
+$mail = new PHPMailer(true);
 
-$envio_empresa = mail($empresa_email, $asunto_empresa, $cuerpo_empresa, $headers_empresa);
+try {
+    // Configuración del Servidor SMTP (Con los datos del .env)
+    $mail->isSMTP();
+    $mail->Host       = SMTP_HOST;
+    $mail->SMTPAuth   = true;
+    $mail->Username   = SMTP_USER;
+    $mail->Password   = SMTP_PASS;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // O usa PHPMailer::ENCRYPTION_SMTPS si el puerto es 465
+    $mail->Port       = SMTP_PORT;
+    $mail->CharSet    = 'UTF-8';
 
-if ($envio_empresa) {
-    // Si se envió a la empresa correctamente, enviamos el de confirmación al cliente
-    mail($correo, $asunto_cliente, $cuerpo_cliente, $headers_cliente);
+    // 1. Enviar el correo a la empresa (Notificación del Lead)
+    $mail->setFrom(SMTP_USER, 'EBL Web System');
+    $mail->addAddress(SMTP_USER, 'EBL Consultas'); // Para quién (la empresa)
+    $mail->addReplyTo($correo, $nombre); // Si la empresa hace "Responder", le responde al cliente directamente
+
+    $mail->isHTML(true);
+    $mail->Subject = $asunto_empresa;
+    $mail->Body    = $cuerpo_empresa;
+
+    $mail->send();
+
+    // 2. Enviar correo de Confirmación Automática al Cliente
+    $mail->clearAllRecipients(); // Limpiar el destino anterior (la empresa)
+    $mail->clearReplyTos();
+
+    $mail->setFrom(SMTP_USER, 'EBL Grupo Logístico');
+    $mail->addAddress($correo, $nombre); // Destino: el cliente
+
+    $mail->Subject = $asunto_cliente;
+    $mail->Body    = $cuerpo_cliente;
+
+    $mail->send();
     
     // Devolver éxito en JSON
     http_response_code(200);
-    echo json_encode([    "status" => "success", 
-    "message" => "¡Excelente! Tu mensaje ha sido enviado correctamente. Un experto se pondrá en contacto pronto."
-]);
-exit;
-} else {
-    // Si falló el primer mail, hubo un error de servidor
+    echo json_encode([    
+        "status" => "success", 
+        "message" => "¡Excelente! Tu mensaje ha sido enviado correctamente. Un experto se pondrá en contacto pronto."
+    ]);
+    exit;
+} catch (Exception $e) {
+    // Registrar error interno real en log del servidor pero mensaje amigable al usuario
+    error_log("Error de Mailer: " . $mail->ErrorInfo);
     http_response_code(500); // Internal Server Error
     echo json_encode(["status" => "error", "message" => "Ocurrió un error al intentar enviar el mensaje. Por favor intente más tarde o comuníquese por teléfono."]);
 }
