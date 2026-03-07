@@ -1,4 +1,23 @@
 <?php
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+error_reporting(E_ALL);
+
+function handleException($e) {
+    http_response_code(500);
+    echo json_encode([
+        "status" => "error", 
+        "message" => "Error del Servidor: " . $e->getMessage(),
+        "file" => $e->getFile(),
+        "line" => $e->getLine()
+    ]);
+    exit;
+}
+set_exception_handler('handleException');
+set_error_handler(function($severity, $message, $file, $line) {
+    throw new ErrorException($message, 0, $severity, $file, $line);
+});
+
 // Permitir solicitudes solo por POST
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405); // Method Not Allowed
