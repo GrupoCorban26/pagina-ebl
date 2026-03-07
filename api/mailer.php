@@ -208,8 +208,8 @@ try {
     exit;
 } catch (Exception $e) {
     // Registrar error interno real en log del servidor pero mensaje amigable al usuario
-    error_log("Error de Mailer: " . $mail->ErrorInfo);
+    error_log("Error de Mailer: " . $mail->ErrorInfo . " | Exception: " . $e->getMessage());
     http_response_code(500); // Internal Server Error
-    echo json_encode(["status" => "error", "message" => "Ocurrió un error al intentar enviar el mensaje. Por favor intente más tarde o comuníquese por teléfono."]);
+    echo json_encode(["status" => "error", "message" => "Ocurrió un error al intentar enviar el mensaje: " . $mail->ErrorInfo . " | Ex: " . $e->getMessage()]);
 }
 ?>
