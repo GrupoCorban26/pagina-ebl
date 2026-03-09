@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Tarifas de Fletes, Aduanas y Agenciamiento de Carga | EBL Group Peru';
+$page_title = 'Tarifas de Fletes, Aduanas y Agenciamiento de Carga | EBL Grupo Logístico';
 $meta_desc = 'Conoce nuestras tarifas base para cargas aéreas, marítimas (FCL y LCL), servicio Courier y Seguros Internacionales. EBL Grupo Logístico.';
 
 require_once ASSETS_PATH . '/header.php';

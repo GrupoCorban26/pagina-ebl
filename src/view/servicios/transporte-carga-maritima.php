@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Transporte de Carga Marítima | EBL Group Peru';
+$page_title = 'Transporte de Carga Marítima | EBL Grupo Logístico';
 $meta_desc = 'Especialistas en carga FCL, LCL, IMO, BreakBulk, y servicio intermodal asegurando el traslado de sus mercancías por vía marítima.';
 
 require_once ASSETS_PATH . '/header.php';

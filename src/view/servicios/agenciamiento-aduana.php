@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Agenciamiento de Aduanas | EBL Group Peru';
+$page_title = 'Agenciamiento de Aduanas | EBL Grupo Logístico';
 $meta_desc = 'Desaduanaje de carga marítima, aérea y courier para realizar sus operaciones aduaneras en el menor tiempo y minimizando costos.';
 
 require_once ASSETS_PATH . '/header.php';

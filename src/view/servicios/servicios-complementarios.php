@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Servicios Complementarios de Aduanas y Logística | EBL Group Peru';
+$page_title = 'Servicios Complementarios de Aduanas y Logística | EBL Grupo Logístico';
 $meta_desc = 'Descubre nuestros servicios complementarios: Asesoría, Door 2 Door, Cuadrillas, Estiba, Desestiba y Resguardo para brindar seguridad total a su carga.';
 
 require_once ASSETS_PATH . '/header.php';

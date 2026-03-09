@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Seguro Internacional | EBL Group Peru';
+$page_title = 'Seguro Internacional | EBL Grupo Logístico';
 $meta_desc = 'Seguro internacional puerta a puerta contra todo riesgo. Le acompañamos en todo su proceso logístico desde el inicio hasta el fin.';
 
 require_once ASSETS_PATH . '/header.php';

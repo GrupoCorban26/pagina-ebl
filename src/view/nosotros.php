@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO de la pagina de Nosotros
-$page_title = 'Quiénes Somos | Socios y Colaboradores | EBL Group Peru';
+$page_title = 'Quiénes Somos | Socios y Colaboradores | EBL Grupo Logístico';
 $meta_desc = 'Conoce al equipo corporativo y los especialistas en comercio exterior de EBL Grupo Logístico. Filosofía, Misión, Visión y nuestros colaboradores comerciales.';
 
 require_once ASSETS_PATH . '/header.php';

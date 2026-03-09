@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Transporte Interno | EBL Group Peru';
+$page_title = 'Transporte Interno | EBL Grupo Logístico';
 $meta_desc = 'Unidades acondicionadas para todo tipo de carga garantizando altos estándares de seguridad y calidad en nuestro transporte interno.';
 
 require_once ASSETS_PATH . '/header.php';

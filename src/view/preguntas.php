@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Preguntas Frecuentes de Importación y Aduanas | EBL Group Peru';
+$page_title = 'Preguntas Frecuentes de Importación y Aduanas | EBL Grupo Logístico';
 $meta_desc = 'Resuelve tus dudas sobre procesos de importación, tiempos de tránsito, impuestos aduaneros y requisitos para operaciones logísticas exitosas.';
 
 require_once ASSETS_PATH . '/header.php';

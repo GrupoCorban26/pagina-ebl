@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Almacenaje | EBL Group Peru';
+$page_title = 'Almacenaje | EBL Grupo Logístico';
 $meta_desc = 'Servicio de recepción, verificación y cuidado permanente en ubicación de su mercancía para su negocio logístico.';
 
 require_once ASSETS_PATH . '/header.php';

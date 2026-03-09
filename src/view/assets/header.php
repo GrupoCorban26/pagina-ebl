@@ -1,5 +1,5 @@
 <?php
-$page_title = $page_title ?? 'Agencia de Carga Internacional y Aduanas | EBL Group Peru';
+$page_title = $page_title ?? 'Agencia de Carga Internacional y Aduanas | EBL Grupo Logístico';
 $meta_desc = $meta_desc ?? 'Cotiza transporte marítimo, aéreo y agenciamiento de aduanas en Perú. EBL Grupo Logístico: Especialistas en importación y exportación internacional seguros.';
 ?>
 <!DOCTYPE html>

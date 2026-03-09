@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO
-$page_title = 'Transporte de Carga Aérea | EBL Group Peru';
+$page_title = 'Transporte de Carga Aérea | EBL Grupo Logístico';
 $meta_desc = 'Especialistas en carga FCL, LCL, IMO, BreakBulk, servicio multimodal y puerta a puerta interconectando el mundo por vía aérea.';
 
 require_once ASSETS_PATH . '/header.php';

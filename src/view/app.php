@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO Home
-$page_title = 'Agencia de Carga Internacional y Aduanas en Perú | EBL Group Logistico';
+$page_title = 'Agencia de Carga Internacional y Aduanas en Perú | EBL Grupo Logístico';
 $meta_desc = 'EBL Grupo Logístico S.A.C: Optimizando cadenas de suministro. Exportación, Importación, Transporte Marítimo, Aéreo y Agenciamiento de Aduanas en el Callao, Perú.';
 
 require_once ASSETS_PATH . '/header.php';

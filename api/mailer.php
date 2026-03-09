@@ -144,9 +144,13 @@ $cuerpo_cliente = "
 </head>
 <body>
     <div class='container'>
-        <h2>¡Hola, $nombre!</h2>
+        <h2>¡Hola $nombre!</h2>
         <p>Hemos recibido correctamente tu solicitud de contacto a través de nuestra página web.</p>
         <p>En este momento, uno de nuestros especialistas logísticos está revisando tu información y se pondrá en contacto contigo a la brevedad posible al correo <strong>$correo</strong> o al teléfono <strong>$contacto</strong>.</p>
+        <p>Recuerde que puede comunicarse directamente con nosotros vía whatsapp.</p>
+        <a href='https://wa.me/51934308291?text=Hola,%20deseo%20más%20información' style='display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px 0; font-family: Arial, sans-serif;'>
+            Contáctenos por WhatsApp
+        </a>
         <p>Gracias por confiar en EBL Grupo Logístico para potenciar tu cadena de suministro.</p>
         <br>
         <p>Atentamente,<br><strong>El Equipo de EBL Group Peru</strong></p>

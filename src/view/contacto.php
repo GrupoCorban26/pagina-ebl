@@ -1,6 +1,6 @@
 <?php
 // Meta tags para SEO de la pagina Contacto
-$page_title = 'Contacto y Ubicación Comercial | EBL Group Peru';
+$page_title = 'Contacto y Ubicación Comercial | EBL Grupo Logístico';
 $meta_desc = 'Contacta a EBL Grupo Logístico. Te ofrecemos cotizaciones gratis para aduanas, carga aérea, marítima. Ubicados en el Centro Aéreo Comercial, Callao.';
 
 require_once ASSETS_PATH . '/header.php';
