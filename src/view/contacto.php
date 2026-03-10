@@ -67,7 +67,7 @@ require_once ASSETS_PATH . '/header.php';
 
                     <!-- Google reCAPTCHA v2 -->
                     <div class="flex justify-center">
-                        <div class="g-recaptcha" data-sitekey="6LffRIIsAAAAAFYDZLjUaet6uvNAJy3_WMy4hhao"></div>
+                        <div class="g-recaptcha" data-sitekey="<?= CAPTCHA_PUBLICA ?>"></div>
                     </div>
 
                     <button type="submit" id="btnSubmit" class="w-full bg-brand-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 uppercase tracking-widest text-sm flex justify-center items-center">

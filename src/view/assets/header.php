@@ -12,18 +12,34 @@ $meta_desc = $meta_desc ?? 'Cotiza transporte marítimo, aéreo y agenciamiento 
     <meta name="description" content="<?= htmlspecialchars($meta_desc) ?>">
     <meta name="keywords" content="agencia de aduanas, transporte de carga internacional, forwarder peru, flete maritimo, flete aereo, importacion, exportacion, EBL Group">
 
-    <!-- Open Graph / Redes Sociales -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="EBL Grupo Logístico">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<?= BASE_URL ?>/">
+    <meta property="og:url" content="<?= BASE_URL ?>/<?= ltrim($_GET['uri'] ?? '', '/') ?>">
     <meta property="og:title" content="<?= htmlspecialchars($page_title) ?>">
     <meta property="og:description" content="<?= htmlspecialchars($meta_desc) ?>">
-    <meta property="og:image" content="<?= BASE_URL ?>/src/img/OG-IMAGE.jpg"> <!-- Recomendado: crear esta imagen -->
+    <meta property="og:image" content="<?= BASE_URL ?>/src/img/LOGO-PRINCIPAL.png">
+    <meta property="og:image:alt" content="Logotipo de EBL Grupo Logístico">
+    <meta property="og:locale" content="<?= ($_SESSION['lang'] ?? 'es') === 'es' ? 'es_PE' : 'en_US' ?>">
 
     <!-- Twitter Cards -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="<?= htmlspecialchars($page_title) ?>">
-    <meta property="twitter:description" content="<?= htmlspecialchars($meta_desc) ?>">
-    <meta property="twitter:image" content="<?= BASE_URL ?>/src/img/OG-IMAGE.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<?= BASE_URL ?>/<?= ltrim($_GET['uri'] ?? '', '/') ?>">
+    <meta name="twitter:title" content="<?= htmlspecialchars($page_title) ?>">
+    <meta name="twitter:description" content="<?= htmlspecialchars($meta_desc) ?>">
+    <meta name="twitter:image" content="<?= BASE_URL ?>/src/img/LOGO-PRINCIPAL.png">
+    <meta name="twitter:image:alt" content="EBL Grupo Logístico - Transporte de carga internacional">
+
+    <!-- SEO Técnico Global -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="EBL Grupo Logístico">
+    <link rel="author" href="<?= BASE_URL ?>/nosotros">
+    
+    <!-- Metadatos de Aplicación (Mobile/PWA) -->
+    <meta name="theme-color" content="#0F265C"> <!-- brand-blue -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="EBL Grupo">
 
     <!-- Schema.org (SEO Local y Corporativo) -->
     <script type="application/ld+json">
@@ -69,7 +85,7 @@ $meta_desc = $meta_desc ?? 'Cotiza transporte marítimo, aéreo y agenciamiento 
     </script>
 
     <link rel="shortcut icon" href="<?= IMG_URL ?>/favicon.ico" />
-    <link rel="canonical" href="<?= BASE_URL ?>/">
+    <link rel="canonical" href="<?= BASE_URL ?>/<?= ltrim($_GET['uri'] ?? '', '/') ?>">
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

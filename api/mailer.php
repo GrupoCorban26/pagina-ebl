@@ -203,6 +203,33 @@ try {
 
     $mail->send();
     
+    // ==========================================
+    // 3. ENVIAR LEAD AL SGI
+    // ==========================================
+    // $sgi_url = "http://localhost:8000/api/v1/publico/leads-web"; // LOCAL
+    $sgi_url = "https://api.sgi-grupocorban.com/api/v1/publico/leads-web"; // PRODUCCION
+    
+    $sgi_data = json_encode([
+        "nombre"         => $nombre,
+        "correo"         => $correo,
+        "telefono"       => $contacto,
+        "asunto"         => $asunto,
+        "mensaje"        => $mensaje,
+        "pagina_origen"  => "eblgroup.pe"
+    ]);
+
+    $ch_sgi = curl_init($sgi_url);
+    curl_setopt($ch_sgi, CURLOPT_HTTPHEADER, [
+        'Content-Type: application/json',
+        'X-SGI-API-Key: ' . SGI_WEB_API_KEY
+    ]);
+    curl_setopt($ch_sgi, CURLOPT_POST, true);
+    curl_setopt($ch_sgi, CURLOPT_POSTFIELDS, $sgi_data);
+    curl_setopt($ch_sgi, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch_sgi, CURLOPT_TIMEOUT, 5);
+    curl_exec($ch_sgi);
+    curl_close($ch_sgi);
+
     // Devolver éxito en JSON
     http_response_code(200);
     echo json_encode([    

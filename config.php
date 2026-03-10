@@ -42,3 +42,5 @@ define('SMTP_USER', $_ENV['SMTP_USER']);
 define('SMTP_PASS', $_ENV['SMTP_PASS']);
 define('SMTP_PORT', $_ENV['SMTP_PORT']);
 define('CAPTCHAT_SECRETA', $_ENV['CAPTCHA_SECRETA']);
+define('CAPTCHA_PUBLICA', $_ENV['CAPTCHA_PUBLICA'] ?? '');
+define('SGI_WEB_API_KEY', $_ENV['SGI_WEB_API_KEY'] ?? '');
