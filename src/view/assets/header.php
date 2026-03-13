@@ -96,7 +96,7 @@ $meta_desc = $meta_desc ?? 'Cotiza transporte marítimo, aéreo y agenciamiento 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Tailwind CSS Compilado Localmente -->
-    <link rel="stylesheet" href="<?= CSS_URL ?>/output.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= CSS_URL ?>/output.css">
     <style>
         /* Glassmorphism Classes para el Menú / NavBar */
         .glass-nav {
@@ -135,9 +135,11 @@ $meta_desc = $meta_desc ?? 'Cotiza transporte marítimo, aéreo y agenciamiento 
                 </span>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="https://www.facebook.com/eblGrupoLogistico/" target="_blank" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/eblGrupoLogistico" target="_blank" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/ebl.logistico/" target="_blank" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UC6ERllgQXmbzpYuYAtvALZQ" target="_blank" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/ebl-group/" target="_blank" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@ebl_grupologistico" target="_blank" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@EBLGrupoLogistico" target="_blank" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@ return [
     'hero_title_red_1' => 'distancias,',
     'hero_title_2' => 'entregando',
     'hero_title_red_2' => 'eficiencia',
-    'hero_cta' => 'Solicita una Cotización Libre',
+    'hero_cta' => 'Solicita una Cotización',
 
     // Home Page Services Section
     'home_srv_title' => 'Nuestros Servicios Principales',

@@ -7,3 +7,5 @@
 # Archivos temporales de sistema
 Thumbs.db
 .DS_Store
+
+.agents/

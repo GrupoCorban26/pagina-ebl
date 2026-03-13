@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/GrupoCorban26/pagina-ebl#readme",
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
   }
 }

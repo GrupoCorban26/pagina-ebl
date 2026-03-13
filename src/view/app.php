@@ -9,15 +9,13 @@ require_once ASSETS_PATH . '/header.php';
 <!-- Se mantuvo la misma lógica, pero usando Tailwind para posicionamiento absoluto -->
 <div class="relative w-full h-[80vh] min-h-[600px] overflow-hidden bg-brand-blue flex items-center justify-center">
     <!-- Overlay oscuro para asegurar contraste del texto -->
-    <div class="absolute inset-0 bg-black/90 z-10"></div>
+    <div class="absolute inset-0 bg-black/85 z-10"></div>
     
     <!-- Video Background. Reemplazar src si es necesario, usando el mismo que el original -->
     <video src="<?= IMG_URL ?>/logistics-converted.mp4" autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0"></video>
     
     <div class="relative z-20 text-center px-4 flex flex-col items-center">
-        <!-- Logo en el centro -->
-        <img src="<?= IMG_URL ?>/LOGO-PRINCIPAL.png" alt="Logo de EBL Group Logístico, Agencia de Aduanas y Carga en Perú" class="h-20 md:h-28 lg:h-32 mb-8 p-3 backdrop-blur-sm animate-fade-in-up" loading="lazy">
-        
+
         <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white uppercase tracking-tight 
                    animate-fade-in-up [animation-delay:0.3s]">
             <?= $texts['hero_title_1'] ?> <span class="text-brand-red"><?= $texts['hero_title_red_1'] ?></span><br>

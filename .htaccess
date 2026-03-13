@@ -5,7 +5,7 @@ RewriteEngine On
 # IMPORTANTE PARA PRODUCCIÓN:
 # Si subes la web a la carpeta principal (public_html o raíz del dominio), 
 # debes cambiar la línea de abajo por: RewriteBase /
-RewriteBase /
+RewriteBase /pagina-ebl/
 # --------------------------------------------------------
 # 2️⃣ Reglas exclusivas
 # --------------------------------------------------------

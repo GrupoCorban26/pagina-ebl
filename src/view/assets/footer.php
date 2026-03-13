@@ -24,6 +24,12 @@
                         <a href="https://www.linkedin.com/company/ebl-group/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red transition-colors duration-300">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
+                        <a href="https://www.tiktok.com/@ebl_grupologistico" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red transition-colors duration-300">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@EBLGrupoLogistico" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red transition-colors duration-300">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
 

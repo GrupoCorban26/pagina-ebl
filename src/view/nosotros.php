@@ -188,11 +188,11 @@ require_once ASSETS_PATH . '/header.php';
                 // Frank
                 ['nombre' => 'Frank Rivera', 'cargo' => 'Ejecutivo Comercial', 'img' => 'colaborador-frank.jpeg', 'telf' => '+51 924 105 128', 'telf_url' => '51924105128', 'email' => 'f.rivera@eblgroup.pe'],
                 // Harley
-                ['nombre' => 'Harley Olivera', 'cargo' => 'Ejecutiva Comercial', 'img' => 'colaborador-harley.jpeg', 'telf' => '+51 924 849 066', 'telf_url' => '51924849066', 'email' => 'h.olivera@eblgroup.pe'],
+                ['nombre' => 'Harley Olivera', 'cargo' => 'Ejecutivo Comercial', 'img' => 'colaborador-harley.jpeg', 'telf' => '+51 924 849 066', 'telf_url' => '51924849066', 'email' => 'h.olivera@eblgroup.pe'],
                 // Julieeth
-                ['nombre' => 'Julieeth Coaguila', 'cargo' => 'Ejecutiva Comercial', 'img' => 'colaborador-julieeth.jpeg', 'telf' => '+51 924 848 605', 'telf_url' => '51924848605', 'email' => 'j.coaguila@eblgroup.pe'],
+                ['nombre' => 'Julieeth Coaguila', 'cargo' => 'Ejecutivo Comercial', 'img' => 'colaborador-julieeth.jpeg', 'telf' => '+51 924 848 605', 'telf_url' => '51924848605', 'email' => 'j.coaguila@eblgroup.pe'],
                 // Yackeline
-                ['nombre' => 'Yackeline Yauri', 'cargo' => 'Ejecutiva Comercial', 'img' => 'colaborador-yackeline.jpeg', 'telf' => '+51 905 433 651', 'telf_url' => '51905433651', 'email' => 'y.yauri@eblgroup.pe'],
+                ['nombre' => 'Yackeline Yauri', 'cargo' => 'Ejecutivo Comercial', 'img' => 'colaborador-yackeline.jpeg', 'telf' => '+51 905 433 651', 'telf_url' => '51905433651', 'email' => 'y.yauri@eblgroup.pe'],
 
             ];
 
