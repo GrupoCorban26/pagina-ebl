@@ -10,7 +10,7 @@ require_once ASSETS_PATH . '/header.php';
 <div class="relative bg-brand-blue py-20 flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center opacity-20 bg-[url('../../img/contacto.png')]"></div>
     <div class="relative z-10 text-center px-4">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-tight"><?= $texts['contact_hero_title'] ?> <span class="text-brand-red">EBL Group</span></h1>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-tight"><?= $texts['contact_hero_title'] ?> <span class="text-brand-red">EBL Grupo Logístico</span></h1>
         <p class="text-lg text-gray-300"><?= $texts['contact_hero_subtitle'] ?></p>
     </div>
 </div>
